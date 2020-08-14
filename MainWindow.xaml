@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+	x:Class="MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	Title="comboboxtemplate"
+	x:Name="window1"
+	Height="361"
+	Width="376">
+	<Grid>
+		<ComboBox
+			x:Name="cb_t"
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Stretch"
+			VerticalAlignment="Top"
+			Margin="8,8,8,0"
+			Height="26">
+			<ComboBox.ItemTemplate>
+				<DataTemplate>
+					<StackPanel
+						Orientation="Horizontal">
+						<Rectangle
+							Fill="{Binding aColor}"
+							Width="16"
+							Height="16"
+							Margin="0,2,5,2" />
+						<TextBlock Text="{Binding namen}" /><TextBlock Text=" ist "/><TextBlock Text="{Binding proz}" />
+					</StackPanel>
+				</DataTemplate>
+			</ComboBox.ItemTemplate>
+		</ComboBox>
+		<Grid.RowDefinitions>
+			<RowDefinition />
+		</Grid.RowDefinitions>
+	</Grid>
+</Window>
